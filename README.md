@@ -15,47 +15,28 @@ spring.jpa.open-in-view=false
 ###
 
 
-package com.takasbank.twodays.restcontroller;
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+<div class="row">
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+	
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-import com.takasbank.twodays.models.User;
+</div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-@RestController
-public class UserRestController {
-
-	@GetMapping("/allUser")
-	public Map<String, Object> allUser() {
-		Map<String, Object> hm = new LinkedHashMap<>();
-		hm.put("name", "Ali");
-		hm.put("age", 39);
-		hm.put("statu", true);
-		hm.put("users", allUserResult());
-		return hm;
-	}
-	
-	
-	public List<User> allUserResult() {
-		List<User> ls = new ArrayList<>();
-		for (int i = 0; i < 10; i++) {
-			User us = new User();
-			us.setMail("mail " + i);
-			us.setPass("12"+i);
-			us.setuDate(new Date());
-			us.setUid(i);
-			ls.add(us);
-		}
-		return ls;
-	}
-	
-	
-	
-}
+</html>
