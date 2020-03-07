@@ -12,8 +12,6 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.open-in-view=false
 
 
----
-
 <dependency>
     <groupId>org.owasp.antisamy</groupId>
     <artifactId>antisamy</artifactId>
