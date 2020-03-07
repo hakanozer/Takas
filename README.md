@@ -20,3 +20,6 @@ spring.jpa.open-in-view=false
     <version>1.5.8</version>
 </dependency>
 ```
+
+````
+https://raw.githubusercontent.com/allure-framework/allure-demo/master/allure-results/sample-json-testsuite.json
